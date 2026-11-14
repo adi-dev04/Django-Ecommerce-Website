@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <head>
+        <title>Customer Order</title>
+    </head>
+    <body>
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+
+        <center>
+            <h1>Enter Details</h1>
+        <div class="container">
+        <form method="get" action="{% url 'order' product.id %}">
+            <label>Enter Name:<input type="text" name="txtnm" required></label><br>
+            <label>Enter Mobile Number:<input type="text" name="phnum" required></label><br>
+            <label>Enter Address:<input type="text" name="addr" required></label><br>
+            <label>Quantity:<input type="number" name="quantity"></label><br>
+            <label>Enter Pincode:<input type="number" name="pin" required></label><br>
+            <label>Select Payment mode:
+            <select name="payment mode">
+            <option>Online</option>
+            <option>Cash on delivery</option></select></label><br><br>
+            <input type="submit" value="Place Order">
+        </form>
+        </div>
+        </center>
+    </body>
+</html>

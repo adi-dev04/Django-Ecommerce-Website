@@ -1,0 +1,17 @@
+body
+{
+    background-color: #eadfdf;
+}
+h1
+{
+    color: #144103;
+    font-family: Arial;
+}
+.container
+{
+    height: 300px;
+    width: 220px;
+    background-color: #144103;
+    color: #eadfdf;
+
+}

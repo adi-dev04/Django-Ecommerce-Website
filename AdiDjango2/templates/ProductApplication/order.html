@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+    <head><title>Order Placed</title></head>
+    <body>
+        <center>
+            <h1>Order Placed</h1>
+            <form method="get">
+            <img src="{% static 'img/pic1.webp' %}" width="300" height="300">
+            <p>Customer: {{request.GET.txtnm}}</p>
+            <p>Mobile Number:{{request.GET.phnum}}</p>
+            <p>Address: {{ request.GET.addr }}</p>
+            <p>Quantity:{{request.GET.quantity}}</p>
+            <p>Pin code:{{request.GET.pin}}</p>
+            <p>Product: {{ product.name }}</p>
+            <p>Price: {{ product.price }}</p>
+        </form>
+        </center>
+    </body>
+</html>

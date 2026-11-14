@@ -1,0 +1,33 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block content %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+        <center>
+        <h1><b>Products</b></h1>
+    <div class="container">
+        <table border="1" class="table table-dark table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Products Images</th>
+            </tr>
+            {% for P1 in products %}
+            <tr>
+                <td>{{P1.id}}</td>
+                <td>{{P1.name}}</td>
+                <td>{{P1.description}}</td>
+                <td>{{P1.price}}</td>
+                <td><a href="{% url 'prodetails' P1.id %}"><img src="{% static 'img/pic1.webp' %}" width="100" height="100"></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+        </center>
+    </body>
+</html>
+
+{% endblock %}  

@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+    <head>
+        <title>{{ product.name }}</title>
+    </head>
+    <body>
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+      <center>
+        <h1>{{ product.name }}</h1>
+     <div class="container">
+      <form action="{% url 'custdetails' product.id %}" method="get">
+        <img src="{% static 'img/pic1.webp' %}" width="300" height="300">
+        <p><b>{{ product.description }}</b></p>
+        <p><b>Price={{ product.price }}</b></p>
+        <input type="submit" value="Buy Now">
+      </center>
+      </form>  
+     </div>
+    </body>
+</html>
